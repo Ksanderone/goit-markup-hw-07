@@ -79,6 +79,9 @@ header {
     color: var(--color-primary);
 }
 /* Ссылки */
+.nav__list {
+    display: flex;
+}
 .nav__link {
     position: relative;
     display: block;
@@ -119,9 +122,6 @@ header {
 }
 .nav__item:last-child {
     margin-right: 0;
-}
-.nav-list {
-    display: flex;
 }
 /* Контакты */
 .nav-contacts__link {
