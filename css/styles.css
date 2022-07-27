@@ -1,4 +1,6 @@
 
+
+
 html {
 	box-sizing: border-box;
 }
@@ -27,6 +29,9 @@ ul {
 	padding-left: 0;
 	margin: 0;
 }
+
+
+
 :root {
     --color-primary: #212121;
     --color-second: #2196f3;
@@ -817,6 +822,7 @@ border: 1px solid #EEEEEE;
     margin-right: 7px;
     border: 2px solid var(--color-primary);
     border-radius: 2px;
+    box-shadow: 0 4px 4px 0 #00000040;
 }
 .form__checkbox {
     appearance: none;

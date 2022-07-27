@@ -1,3 +1,8 @@
+
+
+
+
+
 $color-primary: #212121;
 $color-second: #2196f3;
 $color-contacts: #757575;
@@ -17,6 +22,7 @@ $font-secondary: 'Raleway' , sans-serif;
 
 $margin: 0;
 $padding: 0;
+
 
 ul,
 .footer__adress,
@@ -40,7 +46,6 @@ body {
 }
 
 .hero__title,
-.portfolio__buttons,
 .form__button {
     font-family: $font-primary;
 }
@@ -55,24 +60,35 @@ body {
     color: $color-primary;
 }
 
+.modal,
+.modal__close {
+    background-color: $color-hero-name;
+}
+
 .clients__link {
     color: $color-icons;
+    
     &:hover,
     &:focus {
         border-color: $color-second;
+        color: $color-second;
     }
 }
 
+
 .form-check__icon {
-    border: 2px solid $color-second;
+    background-color: $color-second;
+    fill: $color-hero-name;
 }
 
 .nav__link {
     color: $color-primary;
     &:hover,
-    &:focus,
-    &::after {
+    &:focus {
         color: $color-second;
+    }
+    &::after {
+        background-color: $color-second;
     }
 }
 
@@ -86,34 +102,41 @@ body {
 
 .social-list__link {
     color: $color-social-icons;
+   
     &:focus,
     &:hover {
+        color: $color-hero-name;
+        background-color: $color-second;
+    }
+}
+
+.nav-contacts__icon {
+
+    &:hover,
+    &:focus {
+        color: $color-second;
+    }
+}
+
+.footer__contacts {
+    color: $color-contacts-foter;
+    &:hover,
+    &:focus {
         color: $color-second;
     }
 }
 
 .nav__logo,
 .nav__link.current,
-.nav-contacts__icon:hover,
-.nav-contacts__icon:focus,
-.hero__button,
-.clients__link:hover,
-.clients__link:focus,
-.footer__logo,
-.footer__contacts:hover,
-.footer__contacts:focus,
-.footer__link:hover,
-.footer__link:focus,
-.send__button,
-.portfolio__buttons:hover,
-.portfolio__buttons:focus,
-.form__input:focus + .form__icons,
-.form-check__icon,
-.form__button {
+.footer__logo {
     color: $color-second;
 }
 
-
+.form__icons {
+    .form__input:focus + & {
+        color: $color-second;
+    }
+}
 .paragraph,
 .portfolio-box__paragraph {
     color: $color-contacts;
@@ -126,34 +149,38 @@ body {
 }
 
 .hero__title,
-.hero__button,
 .work__text,
 .team__item,
 .footer,
 .word-logo,
 .send__input,
 .send__button,
-.overlay__paragraph,
-.modal,
-.modal__close,
-.form-check__icon,
-.form__button {
+.form__button,
+.overlay__paragraph {
     color: $color-hero-name;
 }
 
 .footer__link {
     color: $color-hero-name;
+    background-color: $color-icons-footer;
     &:hover,
     &:focus {
         color: $color-hero-name;
+        background-color: $color-second;
     }
 }
 
+.send__button,
+.form__button  {
+    background-color: $color-second;
+}
 .hero__button {
     font-family: $font-primary;
+    background-color: $color-second;
+    color: $color-hero-name;
     &:hover,
     &:focus {
-        color: $color-button;
+        background-color: $color-button;
     }
 }
 
@@ -161,20 +188,15 @@ body {
 .section.team {
     background-color: $color-team;
 }
-
 .portfolio__buttons {
+    font-family: $font-primary;
     background-color: $color-team;
-
     &:hover,
     &:focus {
+        background-color: $color-second;
         color: $color-hero-name;
     }
 }
-
-.footer__contacts {
-    color: $color-contacts-foter;
-}
-
 
 
 .footer__link {
