@@ -65,11 +65,13 @@
     border-radius: 50%;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+        border-radius: 50%;
+    }
 }
-.footer__link:hover,
-.footer__link:focus {
-    border-radius: 50%;
-}
+
 .send {
     font-weight: 700;
     font-size: 14px;

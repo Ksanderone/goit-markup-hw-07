@@ -10,10 +10,12 @@
 }
 .clients__item {
     margin-right: 30px;
+
+    &:last-child {
+        margin-right: 0;
+    }
 }
-.clients__item:last-child {
-    margin-right: 0;
-}
+
 .clients__link {
     display: flex;
     justify-content: center;
