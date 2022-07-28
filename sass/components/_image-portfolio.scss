@@ -25,13 +25,28 @@
 
 
 .overlay {
-    .portfolio__images:hover + & {
+    .portfolio__image:hover + & {
         opacity: 1;
         transform: translateY(100%);
-        
     }
 }
 
+.portfolio__images:hover .overlay {
+
+    transform: translateY(0%);
+}
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transform: translateY(100%);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    align-items: center;
+}
 
 .portfolio__box {
 padding: 20px 24px;
@@ -56,18 +71,7 @@ border: 1px solid #EEEEEE;
     position: relative;
     overflow: hidden;
 }
-.overlay {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    transform: translateY(100%);
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    display: flex;
-    align-items: center;
-}
+
 .overlay__paragraph {
     font-weight: 400;
     font-size: 18px;

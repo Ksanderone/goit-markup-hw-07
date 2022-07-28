@@ -192,8 +192,13 @@ body {
 
 .nav__logo-word,
 .portfolio-box__name,
-.form__control {
+.form__control,
+.team__name {
   color: #212121;
+}
+
+.team__item {
+  background-color: #ffffff;
 }
 
 .modal,
@@ -273,13 +278,13 @@ body {
 
 .hero__title,
 .work__text,
-.team__item,
 .footer,
 .word-logo,
 .send__input,
 .send__button,
 .form__button,
-.overlay__paragraph {
+.overlay__paragraph,
+.hero__title {
   color: #ffffff;
 }
 
@@ -379,7 +384,6 @@ header {
   -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
 .nav__link::after {
   content: "";
   position: absolute;
@@ -399,11 +403,9 @@ header {
 .nav__item:not(:first-child) {
   margin-left: 50px;
 }
-
 .nav__item:first-child {
   margin-left: 93px;
 }
-
 .nav__item:last-child {
   margin-right: 0;
 }
@@ -413,9 +415,6 @@ header {
   letter-spacing: 0.02em;
   -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.nav-contacts__link {
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
@@ -517,7 +516,6 @@ header {
   margin-right: 30px;
   width: 270px;
 }
-
 .quality__item:last-child {
   margin-right: 0;
 }
@@ -557,7 +555,6 @@ header {
   margin-right: 30px;
   position: relative;
 }
-
 .work__item:last-child {
   margin-right: 0;
 }
@@ -581,10 +578,6 @@ header {
 }
 
 .section.team {
-  padding-bottom: 94px;
-  padding-top: 94px;
-  margin-left: auto;
-  margin-right: auto;
   text-align: center;
 }
 
@@ -604,7 +597,6 @@ header {
   border-radius: 0px 0px 4px 4px;
   margin-right: 30px;
 }
-
 .team__item:last-child {
   margin-right: 0;
 }
@@ -644,7 +636,6 @@ header {
   height: 44px;
   margin-right: 10px;
 }
-
 .social-list__item:last-child {
   margin-right: 0;
 }
@@ -689,7 +680,6 @@ header {
 .clients__item {
   margin-right: 30px;
 }
-
 .clients__item:last-child {
   margin-right: 0;
 }
@@ -804,9 +794,7 @@ header {
   -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-.footer__link:hover,
-.footer__link:focus {
+.footer__link:hover, .footer__link:focus {
   border-radius: 50%;
 }
 
@@ -876,6 +864,9 @@ header {
 .portfolio__item {
   margin-right: 8px;
 }
+.portfolio__item:last-child {
+  margin-right: 0;
+}
 
 .portfolio__buttons {
   border: transparent;
@@ -891,13 +882,7 @@ header {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-.portfolio-list--item:last-child {
-  margin-right: 0;
-}
-
-.portfolio__buttons:hover,
-.portfolio__buttons:focus {
+.portfolio__buttons:hover, .portfolio__buttons:focus {
   -webkit-box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
           box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
   border-radius: 4px;
@@ -920,30 +905,46 @@ header {
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+.portfolio__images:hover, .portfolio__images:focus {
+  -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+          box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+.portfolio__images:nth-child(3n+3) {
+  margin-right: 0;
+}
+.portfolio__images:nth-last-child(-n+3) {
+  margin-bottom: 0;
+}
 
-.portfolio__images:hover .overlay {
+.portfolio__image:hover + .overlay {
   opacity: 1;
   -webkit-transform: translateY(100%);
           transform: translateY(100%);
 }
 
-.portfolio__images:hover,
-.portfolio__images:focus {
-  -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
-          box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
-}
-
-.portfolio__images:nth-child(3n+3) {
-  margin-right: 0;
-}
-
-.portfolio__images:nth-last-child(-n+3) {
-  margin-bottom: 0;
-}
-
 .portfolio__images:hover .overlay {
   -webkit-transform: translateY(0%);
           transform: translateY(0%);
+}
+
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+  -webkit-transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .portfolio__box {
@@ -969,26 +970,6 @@ header {
 .portfolio__overlay {
   position: relative;
   overflow: hidden;
-}
-
-.overlay {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  -webkit-transform: translateY(100%);
-          transform: translateY(100%);
-  -webkit-transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 .overlay__paragraph {
@@ -1125,7 +1106,6 @@ header {
   width: 448px;
   height: 40px;
 }
-
 .form__input:focus {
   border-color: rgb(33, 150, 243);
 }
@@ -1147,11 +1127,9 @@ header {
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   resize: none;
 }
-
 .form__textarea:focus {
   border-color: rgb(33, 150, 243);
 }
-
 .form__textarea::-webkit-input-placeholder {
   color: rgba(117, 117, 117, 0.5);
   font-weight: 400;
@@ -1159,7 +1137,6 @@ header {
   line-height: 1.17;
   letter-spacing: 0.01em;
 }
-
 .form__textarea::-moz-placeholder {
   color: rgba(117, 117, 117, 0.5);
   font-weight: 400;
@@ -1167,7 +1144,6 @@ header {
   line-height: 1.17;
   letter-spacing: 0.01em;
 }
-
 .form__textarea:-ms-input-placeholder {
   color: rgba(117, 117, 117, 0.5);
   font-weight: 400;
@@ -1175,7 +1151,6 @@ header {
   line-height: 1.17;
   letter-spacing: 0.01em;
 }
-
 .form__textarea::-ms-input-placeholder {
   color: rgba(117, 117, 117, 0.5);
   font-weight: 400;
@@ -1183,7 +1158,6 @@ header {
   line-height: 1.17;
   letter-spacing: 0.01em;
 }
-
 .form__textarea::placeholder {
   color: rgba(117, 117, 117, 0.5);
   font-weight: 400;
@@ -1242,10 +1216,6 @@ header {
   -moz-appearance: none;
 }
 
-.form__checkbox:checked + .form-check__icon {
-  opacity: 1;
-}
-
 .form-check__icon {
   opacity: 0;
   -ms-flex-negative: 0;
@@ -1254,6 +1224,10 @@ header {
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
   border: 2px solid #2196f3;
   border-radius: 2px;
+}
+
+.form__checkbox:checked + .form-check__icon {
+  opacity: 1;
 }
 
 .form__word {
@@ -1275,8 +1249,6 @@ header {
   -webkit-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-.form__button:hover,
-.form__button:focus {
+.form__button:hover, .form__button:focus {
   background-color: rgb(24, 140, 232);
 }/*# sourceMappingURL=main.css.map */
