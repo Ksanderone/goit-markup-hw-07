@@ -24,17 +24,11 @@
 }
 
 
-.overlay {
-    .portfolio__image:hover + & {
-        opacity: 1;
-        transform: translateY(100%);
-    }
-}
-
 .portfolio__images:hover .overlay {
-
     transform: translateY(0%);
+    opacity:1;
 }
+
 .overlay {
     position: absolute;
     width: 100%;

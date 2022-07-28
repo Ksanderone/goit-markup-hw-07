@@ -916,15 +916,10 @@ header {
   margin-bottom: 0;
 }
 
-.portfolio__image:hover + .overlay {
-  opacity: 1;
-  -webkit-transform: translateY(100%);
-          transform: translateY(100%);
-}
-
 .portfolio__images:hover .overlay {
   -webkit-transform: translateY(0%);
           transform: translateY(0%);
+  opacity: 1;
 }
 
 .overlay {
