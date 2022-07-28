@@ -62,10 +62,11 @@ body {
     color: $color-primary;
 }
 
-
-.modal,
-.modal__close,
 .team__item {
+    background-color: $color-hero-name;
+}
+.modal,
+.modal__close {
     background-color: $color-hero-name;
 }
 
