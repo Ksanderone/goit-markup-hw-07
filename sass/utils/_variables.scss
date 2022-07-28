@@ -56,12 +56,15 @@ body {
 
 .nav__logo-word,
 .portfolio-box__name,
-.form__control {
+.form__control,
+.team__name {
     color: $color-primary;
 }
 
+
 .modal,
-.modal__close {
+.modal__close,
+.team__item {
     background-color: $color-hero-name;
 }
 
@@ -150,13 +153,13 @@ body {
 
 .hero__title,
 .work__text,
-.team__item,
 .footer,
 .word-logo,
 .send__input,
 .send__button,
 .form__button,
-.overlay__paragraph {
+.overlay__paragraph,
+.hero__title {
     color: $color-hero-name;
 }
 
